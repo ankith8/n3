@@ -1,7 +1,230 @@
+// Imports
 @import "bootstrap";
+@import "fonts";
 
-/* add site style here */
+// Variables
 $bg : #F4F7F8;
-body{
+$violet:#6F2183;
+$violet-deep:#4C1367;
+
+
+// add site style here 
+
+body,html{
   background-color: $bg;
+  font-family: "Montserrat-Regular";
+  color: white;
+  .container-fluid{
+    padding: 0;
+    display: flex
+  }
+  transition: background-color .4s;
+}
+
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 250px;
+  margin: 0;
+  transition: 0.3s;
+}
+
+
+.sidebar-menu{
+  height: 1024px;
+  width: 246px;
+  background-color: $violet;
+  z-index: 200;
+  position: relative;
+
+  font-family: "Montserrat-Regular";
+
+  .sidebar-menu-inner{
+
+    .logo-main{
+      height: 70px;
+      padding: 9px 44px;
+      background-color: $violet-deep;
+    }
+    
+    .name-company{
+      height: 45px;
+      background-color: #FFFFFF;
+      .cust-name{
+          height: 18px;
+          color: #DF542A;
+          font-family: "Montserrat-Bold";
+          font-size: 14px;
+          line-height: 18px;
+          padding-left: 21px;
+          padding-top: 5px;
+          margin: 0;
+      }
+      .cust-org{
+          height: 14px;
+          color: #626272;
+          font-family: "Montserrat-Regular";
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 14px;
+          padding-left: 21px;
+          padding-top: 5px;
+          margin: 0;
+      }
+    }
+
+    ul.main-menu{
+      list-style: none;
+      padding: 0;
+      
+    }
+
+    li.root-level{
+        height: 67px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: $violet;
+        border-left: 6px solid $violet;;
+
+        
+
+        a{
+          text-decoration: none;
+          margin-left: 24px;
+          color: #D18EE2;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 34px;
+
+          img{
+            width: 17px;
+            height: 17px;
+          }
+          img.arrow{
+            width: 7px;
+            height: 12px;
+            margin: 12px;
+          }
+  
+          span{
+              padding-left: 21px;
+          }
+        }
+
+        #logout {
+          font-size: 12px;
+          line-height: 15px;
+        }
+    }
+
+    li.root-level.active{
+      background-color: rgba(76,19,103,0.5);
+      box-shadow: 0 -1px 0 0 #4C1367, 0 1px 0 0 #4C1367;
+      
+      a{
+        color: #FFFFFF;
+      }
+      border-left: 6px solid #FFCC00;
+    }
+  }
+
+  .poweredby{
+    position: absolute;
+    width: 246px;
+    bottom: 26px;
+    img{
+      margin: 0 auto;
+      display: table;
+    }
+    
+  }
+  
+  
+
+
+}
+
+
+
+#main-content {
+  transition: margin-left .5s;
+  padding: 16px 0;
+  margin: 0;
+  width: 100%;
+
+  background-color: $violet;
+  color: white;
+
+  .top-bar{
+    width: 100%;
+    img{
+      width: 17px;
+      height: 17px;
+    }
+    .arrow{
+      -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+      transform: rotate(180deg);
+    }
+    // .search{}
+  }
+
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) { 
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+// Extra large devices (large desktops, 1024px and up)
+@media (min-width: 1024px) { 
+  .sidebar-menu{
+    .sidebar-menu-inner{
+      li.root-level.active{
+      border-left: 6px solid #65B32E;
+      }
+    }
+ }
+  .sidenav {
+    height: 100%;
+    position: relative;
+    // z-index: 1;
+    // top: 0;
+    // left: 0;
+    // overflow-x: hidden;
+    transition: 0;
+  }
+
+ }
+
+ 
+
+// Dashboard related
+.dashboard{
+  margin: 0;
+  width:100%; 
+  .row{
+    width:100%; 
+  }
+  background-color: grey;
 }
