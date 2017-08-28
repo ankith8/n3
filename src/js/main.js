@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 
 function openNav() {
-    $("#mySidenav").css("width","250px");
+    $("#mySidenav").css("width","246px");
     $(".closebtn").show();
     $("body").css("background-color","rgba(0,0,0,0.4)");
     console.log("open");
@@ -26,13 +26,13 @@ function init(){
 }
 
 function checkNav(){
-    if (window.matchMedia('(max-width: 575px)').matches)
+    if (window.matchMedia('(max-width: 768px)').matches)
     {
         // do functionality on screens smaller than 768px
         closeNav();
     }
     else{
-        $("#mySidenav").css("width","250px");
+        $("#mySidenav").css("width","246px");
     }
 }
 

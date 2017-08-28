@@ -5875,15 +5875,17 @@ body, html {
 
 .sidebar-menu {
   height: 1024px;
-  width: 246px;
   background-color: #6F2183;
   z-index: 200;
   position: relative;
   font-family: "Montserrat-Regular"; }
   .sidebar-menu .sidebar-menu-inner .logo-main {
     height: 70px;
-    padding: 9px 44px;
+    padding: 20px 40px;
     background-color: #4C1367; }
+    .sidebar-menu .sidebar-menu-inner .logo-main img {
+      margin: 0 auto;
+      width: 100%; }
   .sidebar-menu .sidebar-menu-inner .name-company {
     height: 45px;
     background-color: #FFFFFF; }
@@ -5943,7 +5945,7 @@ body, html {
       color: #FFFFFF; }
   .sidebar-menu .poweredby {
     position: absolute;
-    width: 246px;
+    width: 100%;
     bottom: 26px; }
     .sidebar-menu .poweredby img {
       margin: 0 auto;
@@ -5952,22 +5954,124 @@ body, html {
 #main-content {
   -webkit-transition: margin-left .5s;
   transition: margin-left .5s;
-  padding: 16px 0;
+  padding: 0 16px;
   margin: 0;
   width: 100%;
-  background-color: #6F2183;
-  color: white; }
+  background-color: #F4F7F8;
+  color: black; }
   #main-content .top-bar {
-    width: 100%; }
+    width: 100%;
+    height: 50px;
+    background-color: #6F2183;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 34px; }
     #main-content .top-bar img {
       width: 17px;
-      height: 17px; }
+      height: 17px;
+      margin: 15px 10px; }
+    #main-content .top-bar .text-center {
+      margin: 10px 0; }
     #main-content .top-bar .arrow {
       -ms-transform: rotate(180deg);
       /* IE 9 */
       -webkit-transform: rotate(180deg);
       /* Chrome, Safari, Opera */
       transform: rotate(180deg); }
+  #main-content .order-details {
+    margin-top: 62px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px; }
+    #main-content .order-details .order {
+      opacity: 0.2;
+      color: #6C5E73; }
+    #main-content .order-details .order-num {
+      color: #6C5E73; }
+  #main-content .additions .bg-additions {
+    height: 80px;
+    border: 1px solid rgba(173, 179, 185, 0.51);
+    border-radius: 3px;
+    background-color: #FFFFFF; }
+  #main-content .additions .btn-grp {
+    margin: 15px 0; }
+    #main-content .additions .btn-grp .back {
+      color: #626272;
+      font-size: 14px;
+      line-height: 19px;
+      padding: 13px 19px; }
+    #main-content .additions .btn-grp .update {
+      height: 44px;
+      width: 140px;
+      padding: 13px 19px;
+      border-radius: 5px;
+      background-color: #8899AA;
+      margin-left: 10px; }
+  #main-content .add-products {
+    height: 50px;
+    border: 1px solid #C3C8CD;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+    #main-content .add-products .col-xs-12 {
+      padding: 0; }
+    #main-content .add-products input {
+      color: #8899AA;
+      font-size: 12px;
+      line-height: 16px;
+      height: 46px;
+      border: 0;
+      padding: 0; }
+    #main-content .add-products img {
+      width: 20px;
+      height: 20px;
+      margin: 15px 10px 15px 15px; }
+  #main-content .add-table {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid rgba(201, 201, 201, 0.69);
+    border-radius: 4px;
+    background-color: #FFFFFF; }
+    #main-content .add-table .col-md-12 {
+      padding: 0; }
+    #main-content .add-table table {
+      margin: 0; }
+    #main-content .add-table th {
+      color: #626272;
+      font-size: 8px;
+      font-weight: bold;
+      line-height: 11px;
+      padding: 19px; }
+    #main-content .add-table td {
+      font-size: 11px;
+      line-height: 15px;
+      padding: 25px 0 10px 19px; }
+      #main-content .add-table td .edit-btn {
+        height: 17px;
+        width: 17px;
+        border-radius: 4px;
+        background-color: #8899AA; }
+      #main-content .add-table td .glyphicon-pencil {
+        height: 9.4px;
+        width: 8px;
+        -ms-transform: rotate(135deg);
+        /* IE 9 */
+        -webkit-transform: rotate(135deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(135deg); }
+  #main-content .remarks {
+    margin-top: 15px; }
+    #main-content .remarks .col-xs-12 {
+      padding: 0; }
+    #main-content .remarks .well {
+      padding: 15px;
+      color: #8899AA;
+      background-color: #FFFFFF;
+      font-size: 11px;
+      line-height: 17px; }
 
 @media (min-width: 1024px) {
   .sidebar-menu .sidebar-menu-inner li.root-level.active {
@@ -5976,7 +6080,9 @@ body, html {
     height: 100%;
     position: relative;
     -webkit-transition: 0;
-    transition: 0; } }
+    transition: 0; }
+  #main-content {
+    padding: 30px; } }
 
 .dashboard {
   margin: 0;
@@ -5984,3 +6090,52 @@ body, html {
   background-color: grey; }
   .dashboard .row {
     width: 100%; }
+
+.ten input {
+  border-radius: 15px;
+  -webkit-transition: all .6s ease-in-out .3s;
+  transition: all .6s ease-in-out .3s;
+  width: 120px; }
+  .ten input:focus {
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    width: 200px; }
+    .ten input:focus ~ button {
+      -webkit-transform: rotateZ(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotateZ(360deg); }
+      .ten input:focus ~ button.btn-search {
+        background: hotpink;
+        color: #fff;
+        left: 172px;
+        -webkit-transition-delay: 0;
+        transition-delay: 0; }
+      .ten input:focus ~ button.btn-reset {
+        left: 202px;
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s; }
+
+.ten button {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out; }
+  .ten button.btn-search {
+    background: #ccc;
+    border-radius: 50%;
+    height: 26px;
+    left: 92px;
+    top: 2px;
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+    width: 26px; }
+  .ten button.btn-reset {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 10px;
+    height: 20px;
+    left: 92px;
+    line-height: 20px;
+    padding: 0;
+    top: 5px;
+    width: 20px;
+    z-index: -1; }

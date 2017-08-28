@@ -16,7 +16,7 @@ body,html{
   color: white;
   .container-fluid{
     padding: 0;
-    display: flex
+    display: flex;
   }
   transition: background-color .4s;
 }
@@ -44,7 +44,7 @@ body,html{
 
 .sidebar-menu{
   height: 1024px;
-  width: 246px;
+  // width: 246px;
   background-color: $violet;
   z-index: 200;
   position: relative;
@@ -55,8 +55,13 @@ body,html{
 
     .logo-main{
       height: 70px;
-      padding: 9px 44px;
+      padding: 20px 40px;
+      // padding: 9px 44px;
       background-color: $violet-deep;
+      img{
+        margin: 0 auto;
+        width: 100%;
+      }
     }
     
     .name-company{
@@ -142,7 +147,8 @@ body,html{
 
   .poweredby{
     position: absolute;
-    width: 246px;
+    // width: 246px;
+    width: 100%;
     bottom: 26px;
     img{
       margin: 0 auto;
@@ -150,35 +156,177 @@ body,html{
     }
     
   }
-  
-  
-
 
 }
 
 
-
 #main-content {
   transition: margin-left .5s;
-  padding: 16px 0;
+  padding:0 16px;
   margin: 0;
   width: 100%;
 
-  background-color: $violet;
-  color: white;
+  background-color: $bg;
+  color: black;
 
   .top-bar{
     width: 100%;
+    height: 50px;
+    background-color: $violet;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 34px;
+
     img{
       width: 17px;
       height: 17px;
+      margin: 15px 10px;
     }
+    .text-center{
+      margin: 10px 0;
+    }
+
     .arrow{
       -ms-transform: rotate(180deg); /* IE 9 */
       -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
       transform: rotate(180deg);
     }
     // .search{}
+  }
+
+
+  .order-details{
+    margin-top: 62px;
+    margin-bottom: 30px;
+
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+
+    .order {
+      opacity: 0.2;
+      color: #6C5E73;
+    }
+    .order-num {
+      color: #6C5E73;
+    }
+  }
+
+
+// Additions Section
+  .additions{
+    .bg-additions {
+      height: 80px;
+      // min-width: 822px;
+      border: 1px solid rgba(173,179,185,0.51);
+      border-radius: 3px;
+      background-color: #FFFFFF;
+    }
+    .btn-grp{
+      margin: 15px 0;
+      .back {
+        color: #626272;
+        font-size: 14px;
+        line-height: 19px;
+        padding: 13px 19px;
+      }
+      .update{
+        height: 44px;
+        width: 140px;
+        padding: 13px 19px;
+          border-radius: 5px;
+          background-color: #8899AA;
+          margin-left: 10px;
+      }
+    }
+  }
+
+  // Add products section
+  .add-products{
+      height: 50px;
+      border: 1px solid #C3C8CD;
+      border-radius: 3px;
+      background-color: #FFFFFF;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      .col-xs-12{
+        padding: 0;
+      }
+      input{
+          color: #8899AA;
+          font-size: 12px;
+          line-height: 16px;
+          height: 46px;
+          border: 0;
+          padding: 0;
+          // width: 90%;
+      }
+      img{
+        width: 20px;
+        height: 20px;
+        margin: 15px 10px 15px 15px;
+      }
+  }
+
+  // Add Table
+  .add-table{
+
+    box-sizing: border-box;
+    border: 1px solid rgba(201,201,201,0.69);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+
+    .col-md-12{
+      padding: 0;
+    }
+
+    table{
+      margin: 0;
+    }
+
+    th {
+      color: #626272;
+      font-size: 8px;
+      font-weight: bold;
+      line-height: 11px;
+      padding: 19px;
+    }
+    td{
+        font-size: 11px;
+        line-height: 15px;
+        padding: 25px 0 10px 19px;
+        .edit-btn{
+          height: 17px;
+          width: 17px;
+          border-radius: 4px;
+          background-color: #8899AA;
+        }
+        .glyphicon-pencil{
+          height: 9.4px;
+          width: 8px;
+          -ms-transform: rotate(135deg); /* IE 9 */
+          -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
+          transform: rotate(135deg);
+        }
+        
+    }
+  }
+
+  // Remarks Section
+  .remarks{
+    margin-top: 15px;
+    .col-xs-12{
+      padding: 0;
+    }
+    .well{
+      padding: 15px;
+      color: #8899AA;
+      background-color: #FFFFFF;
+      font-size: 11px;
+      line-height: 17px;
+    }
   }
 
 }
@@ -194,6 +342,19 @@ body,html{
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 1024px) {
+//   .sidebar-menu{
+//     width: 246px;
+//     .sidebar-menu-inner{
+//       li.root-level.active{
+//       border-left: 6px solid #65B32E;
+//       }
+//     }
+//  }
+//   .sidenav {
+//     height: 100%;
+//     position: relative;
+//     transition: 0;
+//   }
 }
 
 // Extra large devices (large desktops, 1024px and up)
@@ -208,16 +369,16 @@ body,html{
   .sidenav {
     height: 100%;
     position: relative;
-    // z-index: 1;
-    // top: 0;
-    // left: 0;
-    // overflow-x: hidden;
     transition: 0;
+  }
+
+  #main-content {
+    padding: 30px;
   }
 
  }
 
- 
+
 
 // Dashboard related
 .dashboard{
@@ -227,4 +388,57 @@ body,html{
     width:100%; 
   }
   background-color: grey;
+}
+
+
+
+
+.ten {
+  input {
+    border-radius: 15px;
+    transition: all .6s ease-in-out .3s;
+    width: 120px;
+    &:focus {
+      transition-delay: 0;
+      width: 200px;
+      ~ button {
+        transform: rotateZ(360deg);
+        &.btn-search {
+          background: hotpink;
+          color: #fff;
+          left: 172px;
+          transition-delay: 0;
+        }
+        &.btn-reset {
+          left: 202px;
+          transition-delay: .3s;
+        }
+      }
+    }
+  }
+  button {
+    transition: all .6s ease-in-out;
+    &.btn-search {
+      background: #ccc;
+      border-radius: 50%;
+      height: 26px;
+      left: 92px;
+      top: 2px;
+      transition-delay: .3s;
+      width: 26px;
+    }
+    &.btn-reset {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      font-size: 10px;
+      height: 20px;
+      left: 92px;
+      line-height: 20px;
+      padding: 0;
+      top: 5px;
+      width: 20px;
+      z-index: -1;
+    }
+  }
 }
