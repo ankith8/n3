@@ -9,6 +9,8 @@
     <title>N3-dashboard</title>
 
     <!--build:css css/styles.min.css-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <!--endbuild-->
 
@@ -22,111 +24,116 @@
   <body>
     <div class="container-fluid">
 
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn visible-xs visible-sm" onclick="closeNav()"></a>
         <div class="sidebar-menu">
-          
-              <div class="sidebar-menu-inner">
-                
-                <!--header logo -->
-                <div class="logo-main">
+        
+            <div class="sidebar-menu-inner">
+              
+              <!--header logo -->
+              <div class="logo-main">
+                <a href="index.html">
+                  <img src="../images/logo-white.svg" alt="dashboard">
+                </a>
+              </div>
+
+              <!-- Customer Name and Organisation -->
+              <div class="visible-xs visible-sm name-company">
+                <p class="cust-name">Hello, Somachai</p>
+                <p class="cust-org">TWIN TYPES CORPORATION</p>
+              </div>
+              
+              <!-- All the links -->
+              <ul class="main-menu" style="">
+                <li class="root-level active">
                   <a href="index.html">
-                    <img src="../images/logo-white.svg" alt="dashboard">
+                    <img src="../images/controls-white.svg" alt="dashboard">
+                    <span >Dashboard</span>
                   </a>
-                </div>
+                </li>
 
-                <div class="visible-xs name-company">
-                  <p class="cust-name">Hello, Somachai</p>
-                  <p class="cust-org">TWIN TYPES CORPORATION</p>
-                </div>
-                
-                            
-                <ul class="main-menu" style="">
-                  <!-- add class "multiple-expanded" to allow multiple submenus to open -->
-                  <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-                  <li class="root-level active">
-                    <a href="index.html">
-                      <img src="../images/controls-white.svg" alt="dashboard">
-                      <span >Dashboard</span>
-                    </a>
-                  </li>
+                <li class="root-level">
+                  <a href="orders.html">
+                    <img src="../images/shopping-cart-purple.svg" alt="orders">
+                    <span >Orders</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="orders.html">
-                      <img src="../images/shopping-cart-purple.svg" alt="orders">
-                      <span >Orders</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/factory-purple.svg" alt="orders">
+                    <span >Companies</span>
+                    <img class="arrow pull-right" src="../images/arrow-purple.svg" alt="arrow">
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/factory-purple.svg" alt="orders">
-                      <span >Companies</span>
-                      <img class="arrow pull-right" src="../images/arrow-purple.svg" alt="arrow">
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/box-purple.svg" alt="products">
+                    <span >Products</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/box-purple.svg" alt="products">
-                      <span >Products</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/document-purple.svg" alt="products">
+                    <span >Documents</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/document-purple.svg" alt="products">
-                      <span >Documents</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/pricing-label-purple.svg" alt="pricing">
+                    <span >Pricing</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/pricing-label-purple.svg" alt="pricing">
-                      <span >Pricing</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/shapes-purple.svg" alt="brands">
+                    <span >Brands</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/shapes-purple.svg" alt="brands">
-                      <span >Brands</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/gear-purple.svg" alt="settings">
+                    <span >Settings</span>
+                    <img class="arrow pull-right" src="../images/arrow-purple.svg" alt="arrow">
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/gear-purple.svg" alt="settings">
-                      <span >Settings</span>
-                      <img class="arrow pull-right" src="../images/arrow-purple.svg" alt="arrow">
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/chart-purple.svg" alt="Reports">
+                    <span >Reports</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/chart-purple.svg" alt="Reports">
-                      <span >Reports</span>
-                    </a>
-                  </li>
+                <li class="root-level ">
+                  <a href="index.html">
+                    <img src="../images/people-purple.svg" alt="Account Users">
+                    <span >Account Users</span>
+                  </a>
+                </li>
 
-                  <li class="root-level ">
-                    <a href="index.html">
-                      <img src="../images/people-purple.svg" alt="Account Users">
-                      <span >Account Users</span>
-                    </a>
-                  </li>
+                <li class="root-level visible-xs visible-sm">
+                  <a href="index.html">
+                    <span id="logout" >Log out</span>
+                  </a>
+                </li>
 
-                  <li class="root-level visible-xs">
-                    <a href="index.html">
-                      <span id="logout" >Log out</span>
-                    </a>
-                  </li>
+              </ul> <!-- Links End -->
+            </div> <!-- End  sidebar-menu-inner-->
 
-                </ul>
-              </div>
+            <!-- Footer Icon -->
+            <div class="poweredby ">
+                <img src="../images/poweredby.svg" alt="poweredby">
+            </div>
 
-              <div class="poweredby ">
-                  <img src="../images/poweredby.svg" alt="poweredby">
-              </div>
-      </div> <!--End Sidebar-menu-->
+        </div> <!-- End Sidebar-menu-->
+   
+     </div> <!-- End sidenav -->
      
          <div class="container-fluid dashboard">
           <div class="row">

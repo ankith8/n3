@@ -10,6 +10,8 @@
     <title>N3-orders</title>
 
     <!--build:css css/styles.min.css-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <!--endbuild-->
 
@@ -135,8 +137,10 @@
    
      </div> <!-- End sidenav -->
       
+     <!-- Main Content Section -->
       <div id="main-content" class="container">
 
+        <!-- Menu Navigator for Mobiles Only -->
         <div class="row">
           <div class="col-xs-12 top-bar visible-xs visible-sm"> 
             <div class="row"> 
@@ -151,6 +155,7 @@
           </div>
         </div>
 
+        <!-- Order Header for Desktops Only -->
         <div class="row hidden-xs hidden-sm">
             <div class="col-xs-12 order-details">
                 <span class="order">Orders/</span>
@@ -158,26 +163,31 @@
             </div>
         </div>
 
-
+        <!-- Order Address, Type , owner and Status -->
         <div class="row additions">
             <div class="col-xs-12 col-md-8 bg-additions"> this is a 12 col grid</div>
             <div class="col-xs-12 col-md-4 btn-grp">
               <div class="row">
-                <div class="hidden-xs hidden-sm col-sm-4 btn back ">Back</div>
-                <div class="col-xs-12 col-sm-7 btn btn-primary update">Update Order</div>
+                <div class="hidden-xs hidden-sm col-md-4 btn back ">Back</div>
+                <div class="col-xs-12 col-md-8 btn btn-primary update">Update Order</div>
               </div>
             </div>
         </div>
 
+        <!-- Add Products Search bar -->
         <div class="row add-products">
             <div class="col-xs-12"> 
                 <form>
-                  <span> <img src="../images/icon_plus.svg" alt="add"></span>
-                  <input class="sb-search-input" placeholder="Add Products" type="search" value="" name="search">
+                  <span class="img-animator">
+                      <i class="fa fa-circle-o faa-burst animated"></i>
+                     <img class="search-anim" src="../images/icon_plus.svg" alt="add">
+                  </span>
+                  <input class="search-input" placeholder="Add Products" type="search" value="" name="search">
                 </form>
             </div>
         </div>
 
+        <!-- Orders Table -->
         <div class="row add-table">
           <div class="col-md-12">
             <div class="table-responsive">
@@ -263,20 +273,6 @@
                       <td><a href="">Remove Item</a> </td>
                     </tr>
 
-
-                  <tr>
-                      <td>TN SO 000015</td>
-                      <td>Magnetic contactor - 9A (5.5 kW\, 
-                          7.5 HP)\, control voltage 230 Vac</td>
-                      <td>Schneider Electric</td>
-                      <td>THB 880</td>
-                      <td>30%</td>
-                      <td>THB 660</td>
-                      <td><p>16<button class="edit-btn btn btn-primary btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                      <td>THB 50,079,8823</td>
-                      <td><a href="">Remove Item</a> </td>
-                    </tr>
-
                 </tbody>
                 
             </table>
@@ -284,6 +280,7 @@
         </div>
       </div>
 
+      <!-- Remarks Section -->
       <div class="row remarks">
           <div class="col-xs-12"> 
             <h5>Remarks</h5>
@@ -294,27 +291,70 @@
           </div>
       </div>
 
-     
-
-
-
-
-          <!-- 
-          </div> 
-
-          <div class="row">
-              <div class="col-xs-12 visible-xs">
-                  <img class="text-center"  src="../images/poweredby.svg" alt="poweredby">
+      <!-- Estimate Section -->
+      <div class="row estimate">
+        <div class="estimate-parent col-xs-12 col-sm-offset-6 col-sm-6  col-md-offset-8 col-md-4"> 
+            
+           <div class="row top">
+              <div class="txt-info col-xs-8">
+                 Estimated Delivery Date
               </div>
-          </div> -->
+              <div class="col-xs-4 txt-value text-right">
+                  <span class="">14-04-2016</span>
+              </div>
+            </div>
 
-      </div>
+            <div class="row">
+                <div class="txt-info col-xs-8">
+                    Sub-total
+                </div>
+                <div class="col-xs-4 txt-value text-right">
+                   <span class="">40,033</span>
+                </div>
+            </div>
 
-      
+            <div class="row">
+                <div class="txt-info col-xs-8">
+                   Shipping
+                </div>
+                <div class="col-xs-4 txt-value text-right">
+                  <span class="">0</span>
+                </div>
+              </div>
 
-      
+              <div class="row">
+                  <div class="txt-info col-xs-8">
+                     Special Discount
+                  </div>
+                  <div class="col-xs-4 txt-value text-right">
+                    <span class="">9.999.999</span>
+                  </div>
+                </div>
 
-   </div>
+                <div class="row">
+                  <div class="txt-info col-xs-8">
+                      Tax
+                  </div>
+                  <div class="col-xs-4 txt-value text-right">
+                    <span class="">7</span>% 1826.00
+                  </div>
+                </div>
+
+            <div class="row bottom">
+                <div class="txt-info col-xs-4">
+                   Total
+                </div>
+                <div class="col-xs-8 txt-value text-right">
+                  <span class="total">THB 41,585.31</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+      </div> <!-- End Main Content -->
+
+   </div> <!-- End Container Fluid -->
 
       <!--build:js js/main.min.js -->
       <script src="js/lib/jquery-3.1.0.min.js"></script>

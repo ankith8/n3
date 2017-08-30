@@ -6008,7 +6008,7 @@ body, html {
       padding: 13px 19px;
       border-radius: 5px;
       background-color: #8899AA;
-      margin-left: 10px; }
+      float: left; }
   #main-content .add-products {
     height: 50px;
     border: 1px solid #C3C8CD;
@@ -6022,13 +6022,49 @@ body, html {
       color: #8899AA;
       font-size: 12px;
       line-height: 16px;
-      height: 46px;
+      height: 45px;
       border: 0;
       padding: 0; }
-    #main-content .add-products img {
+    #main-content .add-products .img-animator {
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      margin: 5px; }
+    #main-content .add-products img, #main-content .add-products i {
       width: 20px;
-      height: 20px;
-      margin: 15px 10px 15px 15px; }
+      height: 20px; }
+
+@-webkit-keyframes rotanim {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg); } }
+
+@keyframes rotanim {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg); } }
+    #main-content .add-products .rot {
+      -webkit-animation: rotanim .2s linear;
+      animation: rotanim .2s linear;
+      -webkit-animation-fill-mode: forwards; }
   #main-content .add-table {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -6071,7 +6107,30 @@ body, html {
       color: #8899AA;
       background-color: #FFFFFF;
       font-size: 11px;
-      line-height: 17px; }
+      line-height: 17px;
+      margin: 0; }
+  #main-content .estimate .estimate-parent {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(98, 98, 114, 0.21);
+    box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(98, 98, 114, 0.21); }
+    #main-content .estimate .estimate-parent .txt-info {
+      color: #626272;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: left;
+      margin: 5px 0; }
+    #main-content .estimate .estimate-parent .top {
+      border-bottom: 1px  solid #F1F0F4; }
+    #main-content .estimate .estimate-parent .bottom {
+      border-top: 1px solid #F1F0F4; }
+    #main-content .estimate .estimate-parent .txt-value {
+      color: #C9C9C9;
+      font-size: 13px;
+      line-height: 16px;
+      margin: 5px -5px;
+      padding: 5px;
+      border-radius: 2px; }
 
 @media (min-width: 1024px) {
   .sidebar-menu .sidebar-menu-inner li.root-level.active {
@@ -6082,7 +6141,10 @@ body, html {
     -webkit-transition: 0;
     transition: 0; }
   #main-content {
-    padding: 30px; } }
+    padding: 0 30px; }
+    #main-content .additions .btn-grp .update {
+      width: 60%;
+      float: right; } }
 
 .dashboard {
   margin: 0;
@@ -6090,52 +6152,3 @@ body, html {
   background-color: grey; }
   .dashboard .row {
     width: 100%; }
-
-.ten input {
-  border-radius: 15px;
-  -webkit-transition: all .6s ease-in-out .3s;
-  transition: all .6s ease-in-out .3s;
-  width: 120px; }
-  .ten input:focus {
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
-    width: 200px; }
-    .ten input:focus ~ button {
-      -webkit-transform: rotateZ(360deg);
-      -ms-transform: rotate(360deg);
-      transform: rotateZ(360deg); }
-      .ten input:focus ~ button.btn-search {
-        background: hotpink;
-        color: #fff;
-        left: 172px;
-        -webkit-transition-delay: 0;
-        transition-delay: 0; }
-      .ten input:focus ~ button.btn-reset {
-        left: 202px;
-        -webkit-transition-delay: .3s;
-        transition-delay: .3s; }
-
-.ten button {
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out; }
-  .ten button.btn-search {
-    background: #ccc;
-    border-radius: 50%;
-    height: 26px;
-    left: 92px;
-    top: 2px;
-    -webkit-transition-delay: .3s;
-    transition-delay: .3s;
-    width: 26px; }
-  .ten button.btn-reset {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    font-size: 10px;
-    height: 20px;
-    left: 92px;
-    line-height: 20px;
-    padding: 0;
-    top: 5px;
-    width: 20px;
-    z-index: -1; }
