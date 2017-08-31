@@ -5991,10 +5991,48 @@ body, html {
     #main-content .order-details .order-num {
       color: #6C5E73; }
   #main-content .additions .bg-additions {
-    height: 80px;
+    min-height: 80px;
     border: 1px solid rgba(173, 179, 185, 0.51);
     border-radius: 3px;
     background-color: #FFFFFF; }
+    #main-content .additions .bg-additions .bg-add {
+      margin-bottom: 15px; }
+    #main-content .additions .bg-additions .marker {
+      border-right: 1px solid rgba(173, 179, 185, 0.51); }
+    #main-content .additions .bg-additions .dropdown-elem {
+      margin-top: 0;
+      background-color: white; }
+    #main-content .additions .bg-additions .addr h3 {
+      color: #626272;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 21px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding: 0; }
+    #main-content .additions .bg-additions .addr p {
+      color: #8899AA;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 5px;
+      margin-bottom: 0;
+      padding: 0; }
+    #main-content .additions .bg-additions .dropdown-info .type {
+      color: #626272;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 15px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 1px; }
+    #main-content .additions .bg-additions .dropdown-info .dropdown {
+      text-align: center; }
+      #main-content .additions .bg-additions .dropdown-info .dropdown li, #main-content .additions .bg-additions .dropdown-info .dropdown button {
+        color: #8899AA;
+        font-size: 11px;
+        line-height: 15px; }
+      #main-content .additions .bg-additions .dropdown-info .dropdown button {
+        width: 100%; }
   #main-content .additions .btn-grp {
     margin: 15px 0; }
     #main-content .additions .btn-grp .back {
@@ -6132,6 +6170,11 @@ body, html {
       padding: 5px;
       border-radius: 2px; }
 
+@media (min-width: 576px) and (max-width: 767px) {
+  .additions .bg-additions .dropdown-elem {
+    background-color: white;
+    margin-top: 5px; } }
+
 @media (min-width: 1024px) {
   .sidebar-menu .sidebar-menu-inner li.root-level.active {
     border-left: 6px solid #65B32E; }
@@ -6144,7 +6187,10 @@ body, html {
     padding: 0 30px; }
     #main-content .additions .btn-grp .update {
       width: 60%;
-      float: right; } }
+      float: right; }
+  .additions .bg-additions .dropdown-elem {
+    background-color: white;
+    margin-top: 5px; } }
 
 .dashboard {
   margin: 0;

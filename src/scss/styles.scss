@@ -217,11 +217,66 @@ body,html{
 // Additions Section
   .additions{
     .bg-additions {
-      height: 80px;
+       min-height: 80px;
       // min-width: 822px;
       border: 1px solid rgba(173,179,185,0.51);
       border-radius: 3px;
       background-color: #FFFFFF;
+
+      .bg-add{
+        margin-bottom: 15px;
+      }
+
+      .marker{
+        border-right: 1px solid rgba(173,179,185,0.51);
+        
+      }
+      .dropdown-elem{
+        margin-top: 0;
+        background-color:white;
+      }
+
+      .addr{
+        h3 {
+          color: #626272;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 21px;
+          margin-top: 10px;
+          margin-bottom: 0;
+          padding: 0;
+        }
+        p {
+          color: #8899AA;
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 5px;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+      .dropdown-info{
+        .type {
+          color: #626272;
+          font-size: 11px;
+          font-weight: bold;
+          line-height: 15px;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 1px;
+        }
+        .dropdown{
+          text-align: center;
+          li,button{
+            color: #8899AA;
+            font-size: 11px;
+            line-height: 15px;
+          }
+          button{
+            width: 100%;
+          }
+        }
+      }
     }
     .btn-grp{
       margin: 15px 0;
@@ -405,10 +460,21 @@ body,html{
 @media (max-width: 575px) { }
 // Small devices (landscape phones, 576px and up)
 
-@media (min-width: 576px) and (max-width: 767px) { }
+@media (min-width: 576px) and (max-width: 767px) { 
+  .additions{
+    .bg-additions {
+      .dropdown-elem{
+        background-color: white;
+        margin-top: 5px;
+      }
+    }
+  }
+}
 // Medium devices (tablets, 768px and up)
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
 // Extra large devices (large desktops, 1024px and up)
 
 @media (min-width: 1024px) { 
@@ -437,6 +503,15 @@ body,html{
       }
     }
 
+  }
+
+  .additions{
+    .bg-additions {
+      .dropdown-elem{
+        background-color: white;
+        margin-top: 5px;
+      }
+    }
   }
 
  }
